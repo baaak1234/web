@@ -11,6 +11,10 @@ def home():
 def login():
     return render_template("login.html")
 
+@app.route("/id-class")
+def idclass():
+    return render_template("id-class.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)

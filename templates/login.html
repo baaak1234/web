@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    abc
+    로그인페이지
     <div style="width: 300px; height: 200px; background-color: yellow; margin: top 100px; padding: 20px; box-sizing: border-box 1px ; border :solid black; border-radius: 20px; ">
         <div style="width: 200px; height: 60px; background-color: red; margin: left 50px;">
             <div style="width: 100px; height: 80px; background-color: blue; margin: left 50px right 50px;">
@@ -64,8 +64,11 @@
         <textarea style="width: 300px; height: 200px; padding:4px; font-size: 20px; font-weight: 700;">안녕</textarea> 
 
         <button>로그인</button>
+        <button onclick = "location.href = 'http://127.0.0.1:5000/'">뒤로가기</button>
+        <button onclick = "location.href = 'http://127.0.0.1:5000/id-class'">아이디찾기</button>
 
-        <a href = "https://www.google.com">구글</a>
+        <a href = "http://127.0.0.1:5000/login">로그인</a>
+        <a href = "http://127.0.0.1:5000/">뒤로가기</a>
 
 
 
