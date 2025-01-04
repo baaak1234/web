@@ -3,4 +3,13 @@ body {
     font-size: 14px;
     padding: 0px;
     margin: 0px;
+    font-family:'basic';
 }
+
+@font-face {
+	font-family: "basic";
+	font-style: normal;
+	src: url(../font/NotoSansKR-Regular.ttf) format('truetype');
+}
+
+
