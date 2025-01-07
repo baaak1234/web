@@ -1,3 +1,8 @@
+:root{
+    --color-main:rgb(255, 255, 255);
+    --w-page:1050px;
+}
+
 body {
     background-color: #ffffff;
     font-size: 14px;
@@ -12,4 +17,83 @@ body {
 	src: url(../font/NotoSansKR-Regular.ttf) format('truetype');
 }
 
+input, button, select, textarea{
+    font-family: "regular";
+}
 
+header{
+    width : 100%;
+    height : 60px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header > .inner{
+    width:1050px;
+    height:100%;
+    background-color:var(--color-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img.logo{
+    height : 35%;
+    margin-right: 0px;
+}
+
+header .menu-item{
+    margin-left: 22px;
+    color:#616161;
+    font-weight:700;
+    cursor:pointer;
+}
+
+header .menu-item:hover{
+    color:#fff;
+}
+
+.top-container{
+    width: 100%;
+    height: 450px;
+    background: red;
+    position: relative;
+}
+
+.top-container > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top-container .overlay-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(180, 180, 180, 0.4);
+    position:absolute;
+    top:0;
+    left:0;
+    color :#ffff;
+    display: flex;
+    font-size: 25px;
+    font-weight: 700;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section{
+    width: 100%;
+    padding:50px;
+
+}
+
+.section > .inner{
+    width: var(--w-page);
+    height: 200px;
+    background: red;
+    margin :0 auto;
+}

@@ -3,74 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask App</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='image/logo-icon.png') }}"/>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    메인페이지
-    <div style="width: 300px; height: 200px; background-color: yellow; margin: top 100px; padding: 20px; box-sizing: border-box 1px ; border :solid black; border-radius: 20px; ">
-        <div style="width: 200px; height: 60px; background-color: red; margin: left 50px;">
-            <div style="width: 100px; height: 80px; background-color: blue; margin: left 50px right 50px;">
+     <header>
+        <div class="inner">
 
-            </div>      
+            <img class=logo src="{{ url_for('static', filename='image/logo.png') }}">
+
+
+            <div>
+                <span class="menu-item">머신러닝</span>
+                <span class="menu-item">웹 프론트</span>
+                <span class="menu-item">웹 백엔드</span>
+                <span class="menu-item">딥러닝</span>
+                <span class="menu-item">프로젝트</span>
+                <span class="menu-item">포트폴리오</span>
+            </div>
+        </div>
+    </header>
+    <div class="top-container">
+        <img class=logo src="{{ url_for('static', filename='image/bg.jpg') }}">
+        <div class="overlay-container">
+            <span>제조업기반</span>
+            <span><font style="color:#30a7ff">빅데이터</font> 
+                분석 실무 과정</span>
         </div>
     </div>
-    <div style = "width: 300px; height: 200px; border: 1px solid black; margin: top 10px;">
-        <div style = "background : blue;color :white;">div 1</div>
-        <div style = "background : blue;color :white;">div 2</div>
+    
+    
+    <div class="section">
+        <div class="inner">
 
-        <span style = "background : red ;color :white; display : block;">span 1</span>
-        <span style = "background : red ;color :white; display : block; ">span 2</span>
-        
-        <header></header>
-        <main></main>
-        <footer></footer>
-        <nav></nav>
-        <section></section>
-        <article></article>
-        <aside></aside> 
+        </div>
 
-        
     </div>
-        <img style = "width: 280px; object-fit: cover; border-radius: 140px;" src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt = "google logo" />
-        <br/>
-        <input type = "text" placeholder = "Enter your name"/>
-        <input type = "password"/>
-        <input type = "number"/>
-        <input type = "date"/>
-        <input type = "file"/>
-
-        <input type = "radio" name = "level" value = "상" />
-        <span>상</span>
-        <input type = "radio" name = "level" value = "중" />
-        <span>중</span> 
-        <input type = "radio" name = "level" value = "하" />
-        <span>하</span> 
-
-
-        <select>
-            <option value = "상">상</option>
-            <option value = "중">중</option>
-            <option value = "하">하</option>
-        </select>
-        
-        <input type = "checkbox" name = "level" value = "상" />
-        <span>상</span>
-        <input type = "checkbox" name = "level" value = "중" />
-        <span>중</span> 
-        <input type = "checkbox" name = "level" value = "하" />
-        <span>하</span> 
-
-        <textarea style="width: 300px; height: 200px; padding:4px; font-size: 20px; font-weight: 700;">안녕</textarea> 
-
-        <button onclick = "location.href = 'http://127.0.0.1:5000/login'">회원가입</button>
-        <button onclick = "location.href = 'http://127.0.0.1:5000/id-class'">아이디찾기</button>
-        <button onclick = "location.href = 'http://127.0.0.1:5000/front'">프론트</button>
-
-        <a href = "http://127.0.0.1:5000/login">로그인</a>
-
-
-
-
 </body>
 </html>
