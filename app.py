@@ -23,5 +23,10 @@ def layout():
 def front():
     return render_template("front.html")
 
+@app.route("/js-basic")
+def jsbasic():
+    return render_template("js-basic.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
