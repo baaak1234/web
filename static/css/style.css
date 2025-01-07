@@ -166,3 +166,17 @@ header .menu-item:hover{
 .my-card button:hover{
     background: #000;
 }
+
+.info-card{
+    display: flex;
+    flex-direction: column;
+    color: #4e4e4e;
+    margin-right: 100px;
+}
+
+.info-card .t{
+    color :#000;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
