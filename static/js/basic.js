@@ -1,16 +1,24 @@
 function fetchTodos(){
+
+    $(document).on('click','.todo-box',function(){
+        var todo_id = $(this).data('todo-id');
+        location.href = 'http://127.0.0.1:5000/detail-todo?todo_id='+ todo_id;
+    });
+
+
+
+
     $.ajax ({ 
         url: 'https://jsonplaceholder.typicode.com/todos/',
         type: 'get',
         data: {},
         success: function(todos){
-            console.log(todos);
 
             for(var i = 0; i < todos.length; i++){
                 console.log(todos[i]);
                 var todo = todos[i];
                 $('#todos').append(`
-                    <tr>
+                    <tr style="cursor: pointer;" class = "todo-box"data-todo-id="${todo.id}">
                         <td scope="row">${todos.id}</td>
                         <td>${todo.userId}</td>
                         <td>${todo.title}</td>
