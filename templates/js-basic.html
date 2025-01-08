@@ -9,16 +9,70 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="{{url_for('static', filename='js/basic.js')}}">  </script>
    
 </head>
-
 <body>
-    <input id = 'inp'/>
-    <span id = 'txt'>hello</span>
+
+
+    <h2>Todo 리스트</h2>
+    <div style="width: 900px;">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">userId</th>
+                <th scope="col">title</th>
+                <th scope="col">completed</th>
+              </tr>
+            </thead>
+            <tbody id="todos">
+              
+              
+            </tbody>
+          </table>
+    </div>
+
+    <div id="todo-id"></div>
+    <div id="user-id"></div>
+    <div id="title"></div>
+    <div id="completed"></div>
+
+
+
+
+    <input id="inp"/>
+    <span id="txt">hello</span>
     <button id="my-btn">
         동작
     </button>
+
+    <br/>
+
+    <input placeholder="이름" id="name"/>
+    <input placeholder="나이" type="number"id="age"/>
+    <input placeholder="주소" id="address" readonly/>
+    <button id="save-btn">
+        등록하기
+    </button>
+    <div style="width: 900px;">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">이름</th>
+                <th scope="col">나이</th>
+                <th scope="col">주소</th>
+              </tr>
+            </thead>
+            <tbody id="users">
+              
+              
+            </tbody>
+          </table>
+    </div>
+
 
 </body>
 </html>

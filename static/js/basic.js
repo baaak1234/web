@@ -1,33 +1,126 @@
-// $(document).ready(function(){
-//     $('#my-btn').on('click', function(){
-//         if ($('#txt').html() == "hello"){
-//             $('#txt').html('안녕');
-//         } else {
-//             $('#txt').html('hello');
-//         }
-//     });
-// });
+function fetchTodos(){
+    $.ajax ({ 
+        url: 'https://jsonplaceholder.typicode.com/todos/',
+        type: 'get',
+        data: {},
+        success: function(todos){
+            console.log(todos);
 
-
+            for(var i = 0; i < todos.length; i++){
+                console.log(todos[i]);
+                var todo = todos[i];
+                $('#todos').append(`
+                    <tr>
+                        <td scope="row">${todos.id}</td>
+                        <td>${todo.userId}</td>
+                        <td>${todo.title}</td>
+                        <td>${todo.completed ? '성공' : '실패'}</td>
+                    </tr>
+                `);
+            }
+        },
+        error:function(error){}
+    });
+};
 
 
 
 $(document).ready(function(){
-    $('#my-btn').on('click', function(){
-        var $txt = $('#txt');
-        
-        if ($txt.css('color') === 'rgb(0, 0, 255)' || $txt.css('color') === 'blue'){
-            $txt.css('color', 'black');
-        } else {
-            $txt.css('color', 'blue');
-        }
+
+    fetchTodos();
+
+    $.ajax({
+        url: 'https://jsonplaceholder.typicode.com/todos/2',
+        type: 'get',
+        data: {},
+        success: function(todo){
+            console.log(todo.title);
+            $('#todo-id').html(todo.id);
+            $('#user-id').html(todo.userId);
+            $('#title').html(todo.title);
+            $('#completed').html(todo.completed.toString());
+        },
+        error:function(error){}
     });
-});
+    
 
 
-$(document).ready(function(){
-    $('#my-btn').on('click', function(){
-        var inputValue = $('#inp').val();
-        $('#txt').html(inputValue);
+    
+
+    var index = 1;
+
+   
+    $('#save-btn').on('click',function(){
+       var name = $('#name').val();
+       var age = $('#age').val();
+       var address = $('#address').val();
+ 
+       console.log(name,age,address);
+ 
+ 
+       //유효성 검사
+       if(name.length == 0 ){
+          alert('이름을 입력해주세요');
+          return;
+       }
+ 
+       if(age==0){
+          alert('나이를 입력해주세요');
+          return;
+       }
+ 
+       if(address.length == 0){
+          alert('주소를 입력해주세요');
+          return;
+       }
+ 
+       $('#users').append(`
+                <tr>
+                 <th scope="row">${index}</th>
+                 <td>${name}</td>
+                 <td>${age}</td>
+                 <td>${address}</td>
+               </tr>
+       `);
+       index++;
+      
     });
-});
+ 
+ 
+    $('#address').on('click',function(){
+       new daum.Postcode({
+          oncomplete: function(data) {
+              // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+              // 예제를 참고하여 다양한 활용법을 확인해 보세요.
+    
+    
+              $('#address').val(data.address);
+          }
+      }).open();
+    
+    });
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+    $('#my-btn').on('click',function(){
+       //hello -> 안녕
+ 
+       var v = $('#inp').val();
+       $('#txt')
+       .html(v)
+       .css('color','blue');
+       
+       $('body').css('background',v);
+ 
+    });
+ 
+ 
+ });
+ 
+ 
+ 
